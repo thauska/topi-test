@@ -8,8 +8,9 @@
 - You need to develop both the front-end and the back-end. The language will be defined by the tester
 - Each row of the grid must display at least: the user's photo, repository name, number of stars and the number of forks
 - At least one unit test
+- Deploy to a server (AWS, Heroku, etc)
 
 ## Extra Points
 - Mobile friendly
-- Use Bootstrap
+- Use Lightning Design - http://lightningdesignsystem.com/
 - A cool design
