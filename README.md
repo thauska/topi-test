@@ -11,7 +11,7 @@
 - Paging or infinite scrolling
 - Language selection via SearchBar or Dropdown menu
 - At least one unit test
-- Deploy to a server (AWS, Heroku, etc)
+- Deploy to a server (AWS, Heroku, Azure, etc)
 
 ## Extra Points
 - Persist the data locally (any database or serialized)
