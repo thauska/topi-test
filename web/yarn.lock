@@ -915,6 +915,11 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
+"@salesforce-ux/design-system@^2.13.5":
+  version "2.13.5"
+  resolved "https://registry.yarnpkg.com/@salesforce-ux/design-system/-/design-system-2.13.5.tgz#2ac846503563e32f146d6dcc136509c3b739c5a5"
+  integrity sha512-bJYzZx7W7RAO3T9uNmLSo3ug8QxSi2PhvBhrSi8SamiTXUgfuktIJgxA8UEHU6wm2n98y6Pbu/M4YvuVtOZfOw==
+
 "@soda/friendly-errors-webpack-plugin@^1.7.1":
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/@soda/friendly-errors-webpack-plugin/-/friendly-errors-webpack-plugin-1.7.1.tgz#706f64bcb4a8b9642b48ae3ace444c70334d615d"
