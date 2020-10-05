@@ -1,0 +1,19 @@
+{
+  "name": "topi-internal-full-stack-dev-test-thayanacmamore-gmail.com",
+  "version": "1.0.0",
+  "description": "## Goal - To develop a web application able to display a grid with the most starred repositories of a language in github.  - The URL with the repos: https://api.github.com/search/repositories?q=language:Java&sort=stars&page=1",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/topinformation/topi-internal-full-stack-dev-test-thayanacmamore-gmail.com.git"
+  },
+  "author": "Thayana Mamoré",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/topinformation/topi-internal-full-stack-dev-test-thayanacmamore-gmail.com#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

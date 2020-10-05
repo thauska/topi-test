@@ -6,7 +6,7 @@
           <a href="javascript:void(0);" class="slds-card__header-link" title="Accounts">
             <div class="slds-media__body slds-m-bottom_small">
               <h2 class="slds-card__header-title slds-text-heading_large">
-                <strong>vue-jankenpon/thauska</strong>
+                <strong>vue-jankenpon / thauska</strong>
               </h2>
               <div>
                 <ul class="slds-list_horizontal slds-has-dividers_left slds-has-block-links_space">
