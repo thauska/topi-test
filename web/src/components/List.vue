@@ -56,8 +56,27 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "List",
+  data() {
+    return {
+      repo: [],
+      errors: [],
+    };
+  },
+  created() {
+    axios
+      .get(`https://api.github.com/search/repositories?q=language:Java&sort=stars&page=1`)
+      .then((response) => {
+        this.repo = response.data.items;
+        console.log(this.repo);
+      })
+      .catch((e) => {
+        this.errors.push(e);
+      });
+  },
 };
 </script>
 
