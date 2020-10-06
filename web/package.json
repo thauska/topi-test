@@ -1,13 +1,12 @@
 {
   "name": "starsgithub",
-  "author": "Thayana Mamoré",
-  "email": "thayanacmamore@gmail.com",
-  "license": "MIT",
   "version": "0.1.0",
   "private": true,
+  "author": "Thayana Mamoré",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --dest ../public",
+    "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -19,7 +18,9 @@
     "@salesforce-ux/design-system": "^2.13.5",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-unit-jest": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
+    "@vue/test-utils": "^1.0.3",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
@@ -37,11 +38,24 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {},
+    "overrides": [
+      {
+        "files": [
+          "**/__tests__/*.{j,t}s?(x)",
+          "**/tests/unit/**/*.spec.{j,t}s?(x)"
+        ],
+        "env": {
+          "jest": true
+        }
+      }
+    ]
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "email": "thayanacmamore@gmail.com",
+  "license": "MIT"
 }
