@@ -1,13 +1,13 @@
 <template>
   <div class="slds-grid slds-wrap">
-    <div class="slds-col slds-size--1-of-1 slds-small-size--1-of-2 slds-medium-size--2-of-4">
+    <div class="slds-col slds-size--1-of-2 slds-small-size--1-of-2 slds-medium-size--2-of-4" v-for="(repo, idx) in repositoriesData" :key="idx">
       <div class="slds-box slds-box_x-small slds-m-around--x-small">
         <article class="slds-card">
           <div class="slds-card__body slds-card__body_inner slds-grid slds-grid_align-center">
             <div class="slds-col slds-p-around_small slds-m-around_x-small">
               <div class="slds-media__body slds-m-bottom_small">
                 <h2 class="slds-card__header-title slds-text-heading_large">
-                  <strong>vue-jankenpon / thauska</strong>
+                  <strong>{{repo.full_name}}</strong>
                 </h2>
                 <div>
                   <ul
@@ -15,30 +15,30 @@
                   >
                     <li class="slds-item">Criado por</li>
                     <li class="slds-item">
-                      <strong>thauska</strong>
+                      <strong>{{repo.owner.login}}</strong>
                     </li>
-                    <li class="slds-item">Aug 22, 2020</li>
+                    <li class="slds-item">{{repo.created_at}}</li>
                   </ul>
                 </div>
               </div>
               <div class>
-                <div>Projeto construído seguindo curso prático da DIO - Recriando o tradicional jogo Pedra, Papel e Tesoura em Vue.js</div>
+                <div>{{repo.description}}</div>
                 <div class="slds-m-top_small">
                   <ul class="slds-list_horizontal">
                     <li class="slds-item slds-p-right_small">
                       <svg class="slds-button__icon" aria-hidden="true">
                         <use xlink:href="@/assets/icons/utility-sprite/svg/symbols.svg#favorite" />
                       </svg>
-                      <span class="slds-p-left_xx-small">7</span>
+                      <span class="slds-p-left_xx-small">{{repo.stargazers_count}}</span>
                     </li>
                     <li class="slds-item slds-p-right_medium">
                       <svg class="slds-button__icon" aria-hidden="true">
                         <use xlink:href="@/assets/icons/utility-sprite/svg/symbols.svg#strategy" />
                       </svg>
-                      <span class="slds-p-left_xx-small">3</span>
+                      <span class="slds-p-left_xx-small">{{repo.forks_count}}</span>
                     </li>
                     <li class="slds-item">
-                      <small>Atualizado 2 dias atrás</small>
+                      <small>Última atualização: {{repo.pushed_at}}</small>
                     </li>
                   </ul>
                 </div>
@@ -49,7 +49,7 @@
             >
               <img
                 alt="Person name"
-                src="https://avatars0.githubusercontent.com/u/8525721?s=460&u=12edbf1f91a587a5a62df48f0151c47d3dce1568&v=4"
+                :src="repo.owner.avatar_url"
                 title="User avatar"
                 style="border-radius: 50%; width: 50%;"
               />
@@ -62,36 +62,26 @@
 </template>
 
 <script>
-import axios from "axios";
-
+import RepositoriesService from '@/services/RepositoriesService'
 export default {
   name: "List",
   components: {},
   data() {
     return {
-      repo: [],
+      RepositoriesService: new RepositoriesService(),
+      repositoriesData: [],
     };
   },
   mounted () {
-    this.getRepos()
+    this.fetchRepositories()
   },
   methods: {
-    getRepos() {
-      axios
-        .get(
-          `https://api.github.com/search/repositories?q=language:Java&sort=stars&page=1`
-        )
-        .then((response) => {
-          this.repo = response.data.items;
-          console.log(this.repo);
-        })
-        .catch((e) => {
-          this.errors.push(e);
-        });
-    },
-  },
-};
+    fetchRepositories() {
+      this.RepositoriesService.search('stars', 'desc', 1, null, 10)
+        .then(response => { this.repositoriesData = response.items })
+        .catch(error => { console.log(error) })
+        .finally(() => {  })
+    }
+  }
+}
 </script>
-
-<style>
-</style>
