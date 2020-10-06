@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home.vue renders props.msg when passed 1`] = `
+<div class="slds-scope">
+  <header-stub></header-stub>
+  <div class="myapp slds-m-horizontal_large">
+    <buttonsgroup-stub></buttonsgroup-stub>
+    <list-stub></list-stub>
+  </div>
+</div>
+`;
