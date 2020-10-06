@@ -19,7 +19,7 @@ To run the test suite, first install the dependencies, then run `test`:
 # Using Yarn
 yarn test:unit
 ```
-<hr>
+---
 
 ## Dependencies
 
@@ -42,7 +42,7 @@ yarn test:unit
 	<b>Version</b>: ^2.6.11
 </details>
 
-<hr>
+---
 
 ## Dev Dependencies
 
@@ -107,7 +107,7 @@ yarn test:unit
 	<b>Version</b>: ^2.6.11
 </details>
 
-<hr>
+---
 
 ## Contributors
 

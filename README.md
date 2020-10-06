@@ -19,7 +19,7 @@
 - Use Lightning Design - http://lightningdesignsystem.com/
 - A cool design
 
-<hr>
+---
 
 ## Results:
 
