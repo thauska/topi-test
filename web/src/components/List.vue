@@ -1,6 +1,6 @@
 <template>
   <div class="slds-grid slds-wrap">
-    <div class="slds-col slds-size--1-of-2 slds-small-size--1-of-2 slds-medium-size--2-of-4" v-for="(repo, idx) in repositoriesData" :key="idx">
+    <div class="slds-col slds-size--1-of-1 slds-small-size--1-of-1 slds-medium-size--2-of-4" v-for="(repo, idx) in repositoriesData" :key="idx">
       <div class="slds-box slds-box_x-small slds-m-around--x-small">
         <article class="slds-card">
           <div class="slds-card__body slds-card__body_inner slds-grid slds-grid_align-center">
