@@ -18,3 +18,11 @@
 - Mobile friendly
 - Use Lightning Design - http://lightningdesignsystem.com/
 - A cool design
+
+<hr>
+
+## Results:
+
+Deployed in Heroku:
+
+[https://starsgithub.herokuapp.com/](https://starsgithub.herokuapp.com/)
