@@ -23,6 +23,68 @@
 
 ## Results:
 
-Deployed in Heroku:
+## Front-end 
+
+### Includes 
+
+- Vue.js, Vue-cli
+- Salesforce-UX/Design-System
+- Axios
+- GitHub API
+- Jest unit test
+
+### For front-end project setup
+
+- First change directory to web folder
+
+```
+cd web
+```
+
+- Install node modules with yarn
+
+```
+yarn
+```
+
+### Compiles and hot-reloads for development
+
+```
+yarn serve
+```
+
+### Compiles and minifies for production
+```
+yarn build
+```
+
+- It wil build the public folder in root folder
+
+
+### Lints and fixes files
+```
+yarn lint
+```
+### Test unit
+
+```
+yarn test:unit
+```
+
+## Backend
+
+### Includes 
+
+- Express
+
+- Install node modules with yarn
+
+```
+yarn
+```
+
+- server file in root folder just for deploying to Heroku Platform
+
+### Demo
 
 [https://starsgithub.herokuapp.com/](https://starsgithub.herokuapp.com/)

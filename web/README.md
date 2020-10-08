@@ -1,4 +1,4 @@
-# Most Starred Repositories in github
+# Repo
 
 ## Installation
 
@@ -13,13 +13,12 @@ npm install
 
 ## Tests
 
-To run the test suite, first install the dependencies, then run `test`:
+To run the test suite, first install the dependencies, then run `test:unit`:
 
 ```sh
 # Using Yarn
 yarn test:unit
 ```
----
 
 ## Dependencies
 
@@ -41,8 +40,6 @@ yarn test:unit
 	<b>License</b>: MIT</br>
 	<b>Version</b>: ^2.6.11
 </details>
-
----
 
 ## Dev Dependencies
 
@@ -107,13 +104,9 @@ yarn test:unit
 	<b>Version</b>: ^2.6.11
 </details>
 
----
-
 ## Contributors
 
 Pull requests and stars are always welcome. For bugs and feature requests, please [create an issue](https://github.com/user/repo/issues). [List of all contributors](https://github.com/user/repo/graphs/contributors).
-
-<br>
 
 ## License
 
