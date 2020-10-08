@@ -28,7 +28,7 @@ export default {
   computed: {
     filteredList() {
       return this.repositoriesData.filter((post) => {
-        return post.title.toLowerCase().includes(this.search.toLowerCase());
+        return post.title.toLowerCase().includes(this.language.toLowerCase());
       })
     }
   }

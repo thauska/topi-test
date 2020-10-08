@@ -1,4 +1,23 @@
 <template>
+<div>
+    <div class="slds-form-element slds-m-top_medium">
+    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+      <svg
+        class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default"
+        aria-hidden="true"
+      >
+        <use xlink:href="@/assets/icons/utility-sprite/svg/symbols.svg#search" />
+      </svg>
+      <input
+        type="text"
+        id="text-input-id-1"
+        v-model="search"
+        placeholder="Procurar…"
+        class="slds-input"
+      />
+    </div>
+  </div>
+
   <div class="slds-grid slds-wrap">
     <div
       class="slds-col slds-size--1-of-1 slds-small-size--1-of-1 slds-medium-size--2-of-4"
@@ -65,6 +84,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -77,7 +97,8 @@ export default {
       RepositoriesService: new RepositoriesService(),
       repositoriesData: [],
       page: 1,
-      language: 'JavaScript'
+      language: 'JavaScript',
+      search: ''
     };
   },
   mounted () {
