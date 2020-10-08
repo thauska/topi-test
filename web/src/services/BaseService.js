@@ -48,7 +48,7 @@ export default class BaseService {
   }
   search = async ($sortBy, $orderBy, $page, $q, $perPage) => {
     try {
-      const response = await http.get(`/search/${this.api}?sort=${$sortBy}&order=${$orderBy}&page=${$page}&q=${$q}&perPage=${$perPage}`)
+      const response = await http.get(`/search/${this.api}?sort=${$sortBy}&order=${$orderBy}&page=${$page}&q=language:${$q}&perPage=${$perPage}`)
       return response.data
     } catch (error) {
       throw ResponseService(error, 'update')
